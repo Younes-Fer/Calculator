@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>calculatrice</title>
+
+
+<style type="text/css">
+
+
+
+
+
+	.div{
+		width: 450px;
+		height: 580px;
+		margin: 100px;
+		padding: 15px;
+		background-color:#207090; 
+		border-radius:20px ; 
+			
+	}
+	.form{
+		background-color:#808080 ;
+		text-align: center;
+		border-radius:10px ; 
+	}
+	.txt{
+    	padding: 40px;
+		width: 320px;	
+		font-size:25px; 
+		border-radius:10px;
+	}
+	.button{
+		border-radius:60px;
+		padding: 10px;
+		width: 80px;
+		margin: 10px;
+		font-size:20px;
+ 
+	}
+
+	.button:hover{
+
+     background:lightgreen;
+    /*transition: background 2s;*/
+   /*#64DC51*/
+
+
+	}
+
+
+
+	.h{
+		color:#fffbbb;
+		text-align: center;
+	}
+  .button1{
+  	border-radius:60px;
+  		padding: 10px;
+		width: 80px;
+		margin: 10px;
+		background-color:#FC9804;
+		color:red;
+		font-size:20px; 
+  }
+
+
+
+
+
+
+</style>
+
+ <script type="text/javascript">
+
+
+
+function insert(num){
+
+ document.form.text.value=document.form.text.value+num ;
+	
+}
+
+
+function equal(){
+var num=document.form.text.value;
+	document.form.text.value=eval(num);
+
+}
+
+function del(){
+document.form.text.value='';
+}
+
+function sqrt(){
+	var n=document.form.text.value;
+	document.form.text.value=Math.sqrt(n);
+
+}
+
+function carre(){
+	var c=document.form.text.value;
+	document.form.text.value=c*c;
+}
+
+
+function log(){
+	var c=document.form.text.value;
+	document.form.text.value=Math.log(c);
+}
+
+
+
+ 	
+ </script>
+
+
+</head>
+
+
+
+<center>
+<body>
+
+<div class="div">
+	<form name="form" class="form">
+		     <br>
+		      <h2 class="h" >CALCULATOR</h2>
+		      <br>
+		<input type="text" name="text" class="txt">
+
+		  <br>
+			
+				<input type="button" name="button" value="X²" class="button1" onclick="carre()">
+				<input type="button" name="button" value="ln" class="button1" onclick="log()" >
+				<input type="button" name="button" value="C" class="button1"  onclick="del()">
+				<input type="button" name="button" value="+" class="button1"  onclick="insert('+')">
+           <br>
+         	    <input class="button" type="button" name="button" value="1"   onclick="insert(1)">
+				<input type="button" name="button" value="2" class="button"   onclick="insert(2)">
+				<input type="button" name="button" value="3" class="button"   onclick="insert(3)">
+				<input type="button" name="button" value="-" class="button1"  onclick="insert('-')">
+
+
+           <br>
+         	    <input type="button" name="button" value="4" class="button"   onclick="insert(4)">
+				<input type="button" name="button" value="5" class="button"   onclick="insert(5)">
+				<input type="button" name="button" value="6" class="button"   onclick="insert(6)">
+				<input type="button" name="button" value="x" class="button1"  onclick="insert('*')">
+
+          <br>
+         	    <input type="button" name="button" value="7" class="button"   onclick="insert(7)">
+				<input type="button" name="button" value="8" class="button"   onclick="insert(8)">
+				<input type="button" name="button" value="9" class="button"   onclick="insert(9)">
+				<input type="button" name="button" value="/" class="button1"  onclick="insert('/')">
+         <br>
+         	    <input type="button" name="" value="sqrt"     class="button"   onclick="sqrt()">
+				<input type="button" name="" value="0"        class="button"   onclick="insert(0)">
+				<input type="button" name="" value="."        class="button"   onclick="insert('.')">
+				<input type="button" name="" value="="        class="button1"  onclick="equal()">
+				<br>
+				<br>
+	</form>
+</div>
+
+
+
+
+
+</body>
+</center>
+</html>
